@@ -32,6 +32,7 @@ export interface CaseStudy {
   metric: string;
   label: string;
   gradient: string;
+  image?: string;
 }
 
 export interface Tier {

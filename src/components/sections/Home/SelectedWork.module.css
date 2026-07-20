@@ -78,9 +78,29 @@
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
+.cardImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Darkens the lower portion so the client name / metric stays legible
+   over the photo. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(14, 11, 6, 0.85) 0%,
+    rgba(14, 11, 6, 0.35) 45%,
+    rgba(14, 11, 6, 0.05) 100%
+  );
+}
+
 .wipe {
   position: absolute;
   inset: 0;
+  z-index: 2;
   opacity: 0;
   background: var(--brick);
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -92,6 +112,7 @@
 
 .cardNumber {
   position: absolute;
+  z-index: 3;
   top: 22px;
   left: 24px;
   font-family: var(--mono);
@@ -102,6 +123,7 @@
 
 .cardContent {
   position: absolute;
+  z-index: 3;
   inset: auto 24px 24px;
   color: var(--cream);
 }

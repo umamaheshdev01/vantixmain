@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useNavScroll } from '@/hooks/useNavScroll';
 import { useMagneticRef } from '@/hooks/useMagnetic';
@@ -21,7 +22,9 @@ export function Navbar() {
     return (
       <nav className={styles.navContact} data-nav>
         <Link href="/" className={styles.brand} ref={logoRef as any} data-cursor="" data-magnetic>
-          <span className={styles.vmark}>V</span>
+          <span className={styles.vmark}>
+            <Image src="/logov.jpeg" alt="VantixGrowth" width={34} height={34} className={styles.vmarkImg} priority />
+          </span>
           <span className={styles.wordmarkContact}>
             VantixGrowth <span className={styles.wordmarkDim}>Media</span>
           </span>
@@ -47,7 +50,9 @@ export function Navbar() {
           data-cursor=""
           data-magnetic
         >
-          <span className={styles.vmark} data-nav-mark>V</span>
+          <span className={styles.vmark} data-nav-mark>
+            <Image src="/logov.jpeg" alt="VantixGrowth" width={34} height={34} className={styles.vmarkImg} priority />
+          </span>
           <span className={styles.wordmark} data-nav-word>
             VantixGrowth <span className={styles.wordmarkDim}>Media</span>
           </span>

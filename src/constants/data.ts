@@ -30,6 +30,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metric: '+150K',
     label: 'views in 45 days',
     gradient: 'linear-gradient(150deg, #17140D, #0E0B06)',
+    image: '/cust1.png',
   },
   {
     id: 'case-02',
@@ -38,6 +39,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metric: '+8',
     label: 'long form videos in just 28 days',
     gradient: 'linear-gradient(150deg, #0E0B06, #F4BE1B 220%)',
+    image: '/cust2.png',
   },
   {
     id: 'case-03',
@@ -46,6 +48,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metric: '+30%',
     label: 'watch-through on long-form',
     gradient: 'linear-gradient(150deg, #241f14, #17140D)',
+    image: '/cust3.png',
   },
 ];
 

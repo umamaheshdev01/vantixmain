@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useHorizontalScroll } from '@/hooks/useHorizontalScroll';
 import { CASE_STUDIES } from '@/constants/data';
 import styles from './SelectedWork.module.css';
@@ -33,6 +34,18 @@ export function SelectedWork() {
                 style={{ background: study.gradient }}
                 data-cursor=""
               >
+                {study.image && (
+                  <>
+                    <Image
+                      src={study.image}
+                      alt={study.client}
+                      fill
+                      sizes="(max-width: 820px) 90vw, 42vw"
+                      className={styles.cardImage}
+                    />
+                    <div className={styles.scrim} />
+                  </>
+                )}
                 <div className={styles.wipe} />
                 <div className={styles.cardNumber}>[{study.number}]</div>
                 <div className={styles.cardContent}>

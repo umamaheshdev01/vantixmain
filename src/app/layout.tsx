@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'A boutique video & content studio for tech companies. We turn technical depth into a brand people actually watch. 190M+ views generated.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/logov.jpeg',
   },
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <div id="root">
           <Providers>{children}</Providers>
         </div>
