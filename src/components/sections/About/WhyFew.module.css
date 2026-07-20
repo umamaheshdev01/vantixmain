@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+  background: var(--indigo);
+  color: var(--cream);
+  padding: clamp(80px, 13vh, 150px) clamp(20px, 4vw, 56px);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: clamp(28px, 4vh, 44px);
+}
+
+.headline {
+  margin: 0 0 clamp(24px, 4vh, 40px);
+  max-width: 20ch;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4.4vw, 3.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+.paragraph {
+  margin: 0;
+  max-width: 60ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.65;
+  color: rgba(247, 240, 221, 0.82);
+}

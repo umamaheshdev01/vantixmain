@@ -1,0 +1,100 @@
+/* ============================================================
+   VantixGrowth Design System — Global Styles
+   ============================================================ */
+
+:root {
+  --indigo: #17140D;
+  --indigo-deep: #0E0B06;
+  --brick: #F4BE1B;
+  --cream: #F7F0DD;
+  --cream-dim: #EDE4CC;
+  --ink: #17140D;
+  --accent: #F4BE1B;
+  --grot: 'Geist', 'Hanken Grotesk', 'Helvetica Neue', system-ui, sans-serif;
+  --mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--indigo);
+  font-family: var(--grot);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--indigo);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brick);
+}
+
+::selection {
+  background: var(--brick);
+  color: var(--indigo);
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
+
+@keyframes vgm-drift1 {
+  0% { transform: translate(-8%, -6%) scale(1) }
+  50% { transform: translate(10%, 8%) scale(1.15) }
+  100% { transform: translate(-8%, -6%) scale(1) }
+}
+
+@keyframes vgm-drift2 {
+  0% { transform: translate(6%, 10%) scale(1.1) }
+  50% { transform: translate(-10%, -8%) scale(0.9) }
+  100% { transform: translate(6%, 10%) scale(1.1) }
+}
+
+@keyframes vgm-spin {
+  to { transform: rotate(360deg) }
+}
+
+@keyframes vgm-blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.25 }
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(247, 240, 221, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 820px) {
+  [style*="grid-template-columns:minmax"],
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns:repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 560px) {
+  [data-nav] {
+    flex-wrap: wrap !important;
+    row-gap: 10px !important;
+  }
+}
+

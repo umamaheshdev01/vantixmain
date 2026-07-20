@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brick {
+  background: var(--brick);
+  color: var(--indigo);
+  font-weight: 600;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid rgba(247, 240, 221, 0.2);
+  color: var(--cream);
+  font-weight: 500;
+}

@@ -1,0 +1,40 @@
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--brick);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--brick);
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--brick);
+  text-transform: uppercase;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.ringHovered {
+  background: var(--brick);
+  color: var(--cream);
+}

@@ -1,0 +1,48 @@
+.section {
+  position: relative;
+  background: var(--indigo-deep);
+  color: var(--cream);
+  padding: clamp(80px, 13vh, 150px) clamp(20px, 4vw, 56px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: clamp(32px, 5vh, 56px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(24px, 3vw, 56px);
+}
+
+.number {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--brick);
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(247, 240, 221, 0.78);
+}

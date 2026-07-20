@@ -1,0 +1,51 @@
+.section {
+  position: relative;
+  background: var(--indigo-deep);
+  color: var(--cream);
+  padding: clamp(70px, 12vh, 140px) clamp(20px, 4vw, 56px);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.55);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(28px, 4vh, 44px) 0;
+  border-top: 1px solid rgba(247, 240, 221, 0.16);
+  border-bottom: 1px solid rgba(247, 240, 221, 0.16);
+}
+
+.headline {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4.6vw, 3.6rem);
+  letter-spacing: -0.025em;
+  color: var(--cream);
+}
+
+.accent {
+  color: var(--brick);
+}
+
+.caseNumber {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.6);
+}

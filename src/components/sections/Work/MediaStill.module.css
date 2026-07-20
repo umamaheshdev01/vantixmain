@@ -1,0 +1,48 @@
+.section {
+  position: relative;
+  padding: clamp(24px, 4vw, 64px) clamp(20px, 4vw, 56px);
+  background: var(--cream);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.media {
+  width: 100%;
+  border-radius: 14px;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  padding: 24px !important;
+}
+
+.playRow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--cream);
+}
+
+.playBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--brick);
+  color: var(--indigo);
+  font-family: var(--mono);
+  flex: 0 0 auto;
+}
+
+.playLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.7);
+}

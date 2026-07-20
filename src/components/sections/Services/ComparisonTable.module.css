@@ -1,0 +1,118 @@
+.section {
+  background: var(--cream);
+  color: var(--indigo);
+  padding: clamp(80px, 13vh, 150px) clamp(20px, 4vw, 56px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: clamp(32px, 5vh, 56px);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--cream-dim);
+}
+
+.table {
+  min-width: 720px;
+  display: grid;
+  grid-template-columns: minmax(240px, 2.2fr) 1fr 1fr 1fr;
+}
+
+.cell {
+  padding: 18px 22px;
+}
+
+/* Header row (first 4 grid children) */
+.table > div:nth-child(-n+4) {
+  display: flex;
+  align-items: center;
+  background: var(--indigo);
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.headerCell {
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: var(--grot);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.flagshipHeader {
+  background: var(--brick) !important;
+  color: var(--indigo) !important;
+}
+
+.rowCell {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 16px 22px;
+  border-top: 1px solid var(--cream-dim);
+}
+
+.valueCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 22px;
+  border-top: 1px solid var(--cream-dim);
+}
+
+.altRow {
+  background: var(--cream-dim);
+}
+
+/* Highlight the flagship (VGM Studio) column down the whole table. Declared
+   after .altRow so the tint wins on striped rows too. */
+.flagshipCol {
+  background: rgba(244, 190, 27, 0.12);
+}
+
+.dash {
+  color: rgba(23, 20, 13, 0.22);
+  font-family: var(--mono);
+}
+
+.check {
+  color: var(--indigo);
+  font-family: var(--mono);
+  font-size: 1.1rem;
+}
+
+.textVal {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+
+.footnote {
+  margin: 24px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(23, 20, 13, 0.5);
+}

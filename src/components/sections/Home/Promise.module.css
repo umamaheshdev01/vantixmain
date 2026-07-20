@@ -1,0 +1,132 @@
+.section {
+  background: var(--cream);
+  color: var(--indigo);
+  padding: clamp(90px, 16vh, 180px) clamp(20px, 4vw, 56px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: clamp(20px, 3vh, 30px);
+}
+
+.mediaWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--indigo), var(--indigo-deep));
+}
+
+.mediaImage {
+  object-fit: cover;
+}
+
+.mediaGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 60%;
+  background: radial-gradient(circle at 70% 30%, rgba(244, 190, 27, 0.28), transparent 62%);
+}
+
+.mediaContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.5);
+  text-align: center;
+}
+
+.mediaTitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.mediaSubtitle {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: rgba(247, 240, 221, 0.32);
+}
+
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.tl {
+  top: 16px;
+  left: 16px;
+  border-top: 2px solid var(--brick);
+  border-left: 2px solid var(--brick);
+}
+
+.tr {
+  top: 16px;
+  right: 16px;
+  border-top: 2px solid var(--brick);
+  border-right: 2px solid var(--brick);
+}
+
+.bl {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 2px solid var(--brick);
+  border-left: 2px solid var(--brick);
+}
+
+.br {
+  bottom: 16px;
+  right: 16px;
+  border-bottom: 2px solid var(--brick);
+  border-right: 2px solid var(--brick);
+}
+
+.headline {
+  margin: 0;
+  max-width: 20ch;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.4vw, 3.9rem);
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.line {
+  display: block;
+}
+
+.highlight {
+  background: linear-gradient(transparent 60%, var(--brick) 60%);
+  padding: 0 0.05em;
+}
+
+.paragraph {
+  margin: clamp(28px, 4vh, 44px) 0 0;
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  color: rgba(23, 20, 13, 0.78);
+}

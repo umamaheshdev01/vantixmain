@@ -1,0 +1,65 @@
+.section {
+  position: relative;
+  padding: clamp(70px, 12vh, 140px) clamp(20px, 4vw, 56px);
+  background: var(--indigo);
+  color: var(--cream);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: clamp(40px, 7vh, 72px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.statBlock {
+  border-top: 1px solid rgba(247, 240, 221, 0.18);
+  padding-top: 22px;
+}
+
+.valueWrap {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+}
+
+.affix {
+  color: var(--brick);
+}
+
+.value {
+  color: var(--cream);
+}
+
+.label {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(247, 240, 221, 0.72);
+  max-width: 24ch;
+}
+
+.placeholder {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.4);
+}

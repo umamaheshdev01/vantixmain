@@ -1,0 +1,107 @@
+.section {
+  position: relative;
+  padding: clamp(90px, 15vh, 170px) clamp(20px, 4vw, 56px);
+  background: var(--indigo);
+  color: var(--cream);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 18px;
+}
+
+.headline {
+  margin: 0 0 clamp(40px, 7vh, 72px);
+  max-width: 18ch;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: clamp(60px, 10vw, 120px) minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp(16px, 3vw, 48px);
+  align-items: baseline;
+  padding: clamp(28px, 4vh, 44px) 0;
+  border-top: 1px solid rgba(247, 240, 221, 0.16);
+  border-radius: 12px;
+  /* !important overrides the inline transition set by useReveal (which only
+     lists opacity/transform); transform+opacity are re-listed here so the
+     scroll-reveal still animates. */
+  transition: background 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.row:last-child {
+  border-bottom: 1px solid rgba(247, 240, 221, 0.16);
+}
+
+.row:hover {
+  background: rgba(247, 240, 221, 0.05);
+  padding-left: clamp(16px, 2vw, 32px);
+  padding-right: clamp(16px, 2vw, 32px);
+  box-shadow: inset 3px 0 0 var(--brick);
+}
+
+.row .title,
+.row .description {
+  transition: color 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.row:hover .title {
+  color: var(--brick);
+}
+
+.row:hover .description {
+  color: var(--cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row,
+  .row .title,
+  .row .description {
+    transition: none !important;
+  }
+}
+
+.number {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--brick);
+  letter-spacing: 0.1em;
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 0;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.55;
+  color: rgba(247, 240, 221, 0.78);
+  max-width: 52ch;
+}

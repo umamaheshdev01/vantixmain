@@ -1,0 +1,12 @@
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.indigo { color: var(--indigo); }
+.cream { color: var(--cream); }
+.brick { color: var(--brick); }
+.light { color: rgba(247, 240, 221, 0.65); }

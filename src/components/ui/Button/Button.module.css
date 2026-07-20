@@ -1,0 +1,98 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: none;
+  border: none;
+  outline: none;
+  padding: 18px 34px;
+  transition: transform 0.4s var(--ease-spring), color 0.45s var(--ease-spring);
+  white-space: nowrap;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+}
+
+.arrow {
+  font-family: var(--mono);
+  display: inline-block;
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s var(--ease-spring);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* --- Variants --- */
+
+/* Primary: Brick background, Indigo text. Sweep is Indigo, text becomes Brick. */
+.primary {
+  background: var(--brick);
+  color: var(--indigo);
+}
+.primary .sweep {
+  background: var(--indigo);
+}
+.primary:hover {
+  color: var(--brick);
+}
+.primary:hover .sweep {
+  transform: scaleX(1);
+}
+
+/* Outline: Transparent, Cream border, Cream text. Sweep is Brick, text becomes Indigo. */
+.outline {
+  background: transparent;
+  border: 1px solid rgba(247, 240, 221, 0.32);
+  color: var(--cream);
+}
+.outline .sweep {
+  background: var(--brick);
+}
+.outline:hover {
+  color: var(--indigo);
+}
+.outline:hover .sweep {
+  transform: scaleX(1);
+}
+
+/* Inverse: Indigo background, Cream text. Sweep is Brick, text becomes Indigo. */
+.inverse {
+  background: var(--indigo);
+  color: var(--cream);
+}
+.inverse .sweep {
+  background: var(--brick);
+}
+.inverse:hover {
+  color: var(--indigo);
+}
+.inverse:hover .sweep {
+  transform: scaleX(1);
+}
+
+/* Hover effects for children */
+.btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Smaller sizes can be applied via className overrides */

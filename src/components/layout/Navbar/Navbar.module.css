@@ -1,0 +1,212 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px clamp(20px, 4vw, 56px);
+  border-bottom: 1px solid transparent;
+  transition: padding 0.4s cubic-bezier(0.16,1,0.3,1), background 0.4s, border-color 0.4s;
+}
+
+.scrolled {
+  padding: 13px clamp(20px, 4vw, 56px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dark.scrolled {
+  background: rgba(14, 11, 6, 0.72);
+  border-bottom: 1px solid rgba(247, 240, 221, 0.1);
+}
+
+.light.scrolled {
+  background: rgba(247, 240, 221, 0.72);
+  border-bottom: 1px solid rgba(23, 20, 13, 0.08);
+}
+
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: var(--brick);
+  color: var(--indigo);
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.wordmark {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  transition: color 0.4s;
+}
+
+.dark .wordmark {
+  color: var(--cream);
+}
+
+.light .wordmark {
+  color: var(--indigo);
+}
+
+.wordmarkDim {
+  opacity: 0.55;
+  font-weight: 500;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.tagline {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  white-space: nowrap;
+  transition: color 0.4s;
+}
+
+.dark .tagline,
+.dark .availText {
+  color: var(--cream);
+}
+
+.light .tagline,
+.light .availText {
+  color: var(--indigo);
+}
+
+@media (max-width: 1180px) {
+  .divider,
+  .tagline {
+    display: none !important;
+  }
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.8vw, 44px);
+}
+
+.link {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+
+.dark .link {
+  color: var(--cream);
+}
+
+.light .link {
+  color: var(--indigo);
+}
+
+.link.active {
+  color: var(--brick) !important;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+.avail {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.availDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brick);
+  animation: vgm-blink 2.4s ease-in-out infinite;
+}
+
+.availText {
+  opacity: 0.7;
+  transition: color 0.4s;
+}
+
+@media (max-width: 960px) {
+  .avail {
+    display: none !important;
+  }
+}
+
+.cta {
+  flex: 0 0 auto;
+  padding: 12px 22px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Contact page — static, no scroll-driven theme change */
+.navContact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 4vw, 56px);
+  background: rgba(14, 11, 6, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.wordmarkContact {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+}
+
+.linkContact {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+}

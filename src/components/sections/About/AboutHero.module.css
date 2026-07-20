@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  background: var(--indigo);
+  color: var(--cream);
+  padding: clamp(140px, 20vh, 220px) clamp(20px, 4vw, 56px) clamp(70px, 11vh, 130px);
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  bottom: -14%;
+  left: -6%;
+  width: 44vw;
+  height: 44vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 190, 27, 0.35), transparent 62%);
+  filter: blur(44px);
+  animation: vgm-drift1 26s ease-in-out infinite;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.65);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.headline {
+  margin: 0;
+  max-width: 17ch;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6.6vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.line {
+  display: block;
+}
+
+.accent {
+  color: var(--brick);
+}

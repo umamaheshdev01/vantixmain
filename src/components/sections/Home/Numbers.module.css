@@ -1,0 +1,62 @@
+.section {
+  position: relative;
+  padding: clamp(90px, 15vh, 170px) clamp(20px, 4vw, 56px);
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: clamp(40px, 7vh, 72px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.statBlock {
+  border-top: 3px solid var(--brick);
+  padding-top: 22px;
+}
+
+.valueWrap {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--indigo);
+}
+
+.affix,
+.value {
+  color: var(--indigo);
+}
+
+.label {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(23, 20, 13, 0.7);
+  max-width: 22ch;
+}
+
+.placeholder {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(23, 20, 13, 0.4);
+}

@@ -1,0 +1,131 @@
+.section {
+  position: relative;
+  background: var(--indigo);
+  color: var(--cream);
+  height: 240vh;
+}
+
+.stickyPanel {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: clamp(80px, 12vh, 120px) clamp(20px, 4vw, 56px) 0;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin-bottom: 14px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  letter-spacing: -0.025em;
+}
+
+.scrollHint {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.5);
+}
+
+.trackContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: clamp(24px, 3vw, 44px);
+  padding: 0 clamp(20px, 4vw, 56px);
+  will-change: transform;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: clamp(300px, 42vw, 560px);
+  height: clamp(360px, 58vh, 620px);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.wipe {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: var(--brick);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .wipe {
+  opacity: 0.16;
+}
+
+.cardNumber {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(247, 240, 221, 0.7);
+}
+
+.cardContent {
+  position: absolute;
+  inset: auto 24px 24px;
+  color: var(--cream);
+}
+
+.client {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.65);
+  margin-bottom: 14px;
+}
+
+.metric {
+  font-weight: 600;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.metricLabel {
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  line-height: 1.35;
+  max-width: 26ch;
+  margin-top: 8px;
+  color: rgba(247, 240, 221, 0.85);
+}

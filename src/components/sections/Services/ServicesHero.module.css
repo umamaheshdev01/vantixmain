@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  background: var(--indigo);
+  color: var(--cream);
+  padding: clamp(140px, 20vh, 220px) clamp(20px, 4vw, 56px) clamp(70px, 10vh, 120px);
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  top: -10%;
+  right: -6%;
+  width: 46vw;
+  height: 46vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 190, 27, 0.4), transparent 62%);
+  filter: blur(40px);
+  animation: vgm-drift1 24s ease-in-out infinite;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(247, 240, 221, 0.65);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.headline {
+  margin: 0;
+  max-width: 16ch;
+  font-weight: 600;
+  font-size: clamp(2.6rem, 7vw, 6.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.line {
+  display: block;
+}
+
+.accent {
+  color: var(--brick);
+}
+
+.paragraph {
+  margin: clamp(28px, 4vh, 44px) 0 0;
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  color: rgba(247, 240, 221, 0.82);
+}
