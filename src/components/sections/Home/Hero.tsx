@@ -111,6 +111,8 @@ export function Hero() {
   const sequenceStarted = useRef(false);
 
   const { ref: typedRef, start: startTyping } = useScrambleTypewriter(HIGHLIGHT_TEXT, {
+    charDelay: 18,
+    scrambleTicks: 2,
     onDone: () => setPhase('settling'),
   });
 
@@ -121,31 +123,36 @@ export function Hero() {
     if (typedRef.current) typedRef.current.textContent = HIGHLIGHT_TEXT;
   }, [reducedMotion, typedRef]);
 
-  // Kick off quotes → underline → typewriter once the third heading line's
-  // own reveal transition finishes (existing reveal behavior is untouched —
-  // this only listens for it to end).
+  // Kick off quotes → underline → typewriter shortly after the third heading
+  // line's reveal transition STARTS (existing reveal behavior is untouched —
+  // this only listens for it to begin), so the sequence overlaps the tail of
+  // the reveal instead of waiting the full 1s for it to finish.
   useEffect(() => {
     if (reducedMotion) return;
     const el = line3Ref.current;
     if (!el) return;
 
-    const onTransitionEnd = (e: TransitionEvent) => {
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    const onTransitionStart = (e: TransitionEvent) => {
       if (e.target !== el || sequenceStarted.current) return;
       sequenceStarted.current = true;
-      setPhase('quotes');
+      timer = setTimeout(() => setPhase('quotes'), 250);
     };
 
-    el.addEventListener('transitionend', onTransitionEnd);
-    return () => el.removeEventListener('transitionend', onTransitionEnd);
+    el.addEventListener('transitionstart', onTransitionStart);
+    return () => {
+      el.removeEventListener('transitionstart', onTransitionStart);
+      if (timer) clearTimeout(timer);
+    };
   }, [reducedMotion]);
 
   useEffect(() => {
     if (phase === 'quotes') {
-      const t = setTimeout(() => setPhase('underline'), 750);
+      const t = setTimeout(() => setPhase('underline'), 400);
       return () => clearTimeout(t);
     }
     if (phase === 'underline') {
-      const t = setTimeout(() => setPhase('typing'), 680);
+      const t = setTimeout(() => setPhase('typing'), 350);
       return () => clearTimeout(t);
     }
     if (phase === 'typing') {

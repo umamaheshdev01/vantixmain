@@ -33,7 +33,7 @@ export function CTA() {
       </div>
 
       <div className={styles.container}>
-        <div data-reveal className={styles.eyebrow}>[ 07 — Limited partnerships ]</div>
+        <div data-reveal className={styles.eyebrow}>[ 06 — Limited partnerships ]</div>
 
         <h2 className={styles.headline}>
           <span data-reveal className={styles.line}>We take a limited number</span>

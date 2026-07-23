@@ -11,7 +11,7 @@ export function Method() {
   return (
     <section ref={containerRef as any} data-theme="indigo" data-screen-label="Method" className={styles.section}>
       <div className={styles.container}>
-        <div data-reveal className={styles.eyebrow}>[ 05 — The Method ]</div>
+        <div data-reveal className={styles.eyebrow}>[ 04 — The Method ]</div>
         <h2 data-reveal className={styles.headline}>Deliberate. Repeatable.<br />Built to compound.</h2>
 
         <div className={styles.list}>

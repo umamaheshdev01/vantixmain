@@ -33,7 +33,7 @@ export function FounderTeaser() {
         </Reveal>
 
         <div>
-          <div data-reveal className={styles.eyebrow}>[ 06 — The studio ]</div>
+          <div data-reveal className={styles.eyebrow}>[ 05 — The studio ]</div>
           <p data-reveal className={styles.paragraph}>
             We're a small studio by design. Few partners, deep work, no account-manager theatre. The people who pitch you are the people who make the work — and we only take projects we're sure we can grow.
           </p>

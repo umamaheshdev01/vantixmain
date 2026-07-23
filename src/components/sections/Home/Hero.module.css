@@ -254,7 +254,7 @@
 .underlinePath {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  transition: stroke-dashoffset 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: stroke-dashoffset 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .underlinePathGhost {

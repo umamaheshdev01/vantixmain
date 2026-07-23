@@ -213,3 +213,186 @@
   text-transform: uppercase;
   color: var(--cream);
 }
+
+/* ----------------------------------------------------------------
+   Mobile navigation
+---------------------------------------------------------------- */
+
+.hamburger {
+  display: none;
+  position: relative;
+  z-index: 72;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  margin-right: -10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s;
+}
+
+.dark .hamburgerLine,
+.navContact .hamburgerLine,
+.menuOpen .hamburgerLine {
+  background: var(--cream);
+}
+
+.light .hamburgerLine {
+  background: var(--indigo);
+}
+
+.hamburgerOpen .hamburgerLine:first-child {
+  transform: translateY(4.5px) rotate(45deg);
+}
+
+.hamburgerOpen .hamburgerLine:last-child {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+
+/* While the overlay is open, force the nav bar itself onto the dark theme
+   so the brand + hamburger stay readable over the indigo menu. */
+.menuOpen {
+  z-index: 72;
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.menuOpen .wordmark,
+.menuOpen .wordmarkContact,
+.menuOpen .tagline {
+  color: var(--cream) !important;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 71;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 110px clamp(24px, 7vw, 48px) 40px;
+  background: var(--indigo-deep);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    visibility 0.55s;
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(247, 240, 221, 0.1);
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileMenuOpen .mobileLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileLinkIndex {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--brick);
+  opacity: 0.85;
+}
+
+.mobileLinkActive {
+  color: var(--brick);
+}
+
+.mobileLinkCta {
+  color: var(--brick);
+  border-bottom: none;
+}
+
+.mobileMenuFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileAvail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.8;
+}
+
+.mobileMenuTagline {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.45;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
+  .nav .linksContainer,
+  .navContact .linksContainer,
+  .rightGroup {
+    display: none !important;
+  }
+
+  .nav {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .scrolled {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
