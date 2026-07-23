@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Providers } from './providers';
 import '@/styles/globals.css';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vantixgrowth.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.vantixgrowth.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
