@@ -59,9 +59,6 @@ export function CTA() {
           <Button to="/contact" magnetic withArrow className={styles.actionBtn}>
             Book a call
           </Button>
-          <Button to="/work" variant="outline" magnetic withArrow className={styles.actionBtn}>
-            See our work
-          </Button>
         </Reveal>
       </div>
     </section>
